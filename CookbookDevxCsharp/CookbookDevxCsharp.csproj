@@ -33,10 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v16.2, Version=16.2.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v16.2, Version=16.2.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v16.2.Core, Version=16.2.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Sparkline.v16.2.Core, Version=16.2.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v16.2, Version=16.2.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v16.2, Version=16.2.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v16.2, Version=16.2.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraGrid.v16.2, Version=16.2.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v16.2, Version=16.2.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -62,6 +64,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="lib\docks\ManageDocks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lib\docks\ManageDocks.Designer.cs">
+      <DependentUpon>ManageDocks.cs</DependentUpon>
+    </Compile>
     <Compile Include="lib\gridControl\Kanban.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +77,12 @@
       <DependentUpon>Kanban.cs</DependentUpon>
     </Compile>
     <Compile Include="lib\list\DataSetExample.cs" />
+    <Compile Include="lib\userControls\UserControlExample.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="lib\userControls\UserControlExample.Designer.cs">
+      <DependentUpon>UserControlExample.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SSLTESTDataSet.Designer.cs">
@@ -79,8 +93,14 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="lib\docks\ManageDocks.resx">
+      <DependentUpon>ManageDocks.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="lib\gridControl\Kanban.resx">
       <DependentUpon>Kanban.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lib\userControls\UserControlExample.resx">
+      <DependentUpon>UserControlExample.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

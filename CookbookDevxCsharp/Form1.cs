@@ -30,5 +30,12 @@ namespace CookbookDevxCsharp
             obj.MdiParent = this;
             obj.Show();
         }
+
+        private void dockManagerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            lib.docks.ManageDocks obj1 = new lib.docks.ManageDocks();
+            obj1.MdiParent = this;
+            obj1.Show();
+        }
     }
 }

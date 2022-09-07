@@ -31,6 +31,8 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.kanbanBoardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tileViewKanbanBoardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.docksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dockManagerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -38,7 +40,8 @@
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.kanbanBoardToolStripMenuItem});
+            this.kanbanBoardToolStripMenuItem,
+            this.docksToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1091, 28);
@@ -59,6 +62,21 @@
             this.tileViewKanbanBoardToolStripMenuItem.Size = new System.Drawing.Size(242, 26);
             this.tileViewKanbanBoardToolStripMenuItem.Text = "Tile View Kanban Board";
             this.tileViewKanbanBoardToolStripMenuItem.Click += new System.EventHandler(this.tileViewKanbanBoardToolStripMenuItem_Click);
+            // 
+            // docksToolStripMenuItem
+            // 
+            this.docksToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dockManagerToolStripMenuItem});
+            this.docksToolStripMenuItem.Name = "docksToolStripMenuItem";
+            this.docksToolStripMenuItem.Size = new System.Drawing.Size(61, 24);
+            this.docksToolStripMenuItem.Text = "Docks";
+            // 
+            // dockManagerToolStripMenuItem
+            // 
+            this.dockManagerToolStripMenuItem.Name = "dockManagerToolStripMenuItem";
+            this.dockManagerToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.dockManagerToolStripMenuItem.Text = "DockManager";
+            this.dockManagerToolStripMenuItem.Click += new System.EventHandler(this.dockManagerToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -82,6 +100,8 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem kanbanBoardToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tileViewKanbanBoardToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem docksToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dockManagerToolStripMenuItem;
     }
 }
 
