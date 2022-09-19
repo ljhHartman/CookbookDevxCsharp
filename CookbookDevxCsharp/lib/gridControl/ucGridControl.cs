@@ -19,7 +19,6 @@ namespace CookbookDevxCsharp.lib.gridControl
         {
             InitializeComponent();
 
-
             Fill_GridControl(gridControl1);
 
             Show_HorizontalScrolbar(gridView1);
@@ -27,19 +26,6 @@ namespace CookbookDevxCsharp.lib.gridControl
             Show_SearchBar(gridView1);
 
             Set_CellsReadOnly(gridView1);
-
-
-
-
-
-            // Make the grid read-only.
-            gridView1.OptionsBehavior.Editable = false;
-            // Prevent the focused cell from being highlighted.
-            gridView1.OptionsSelection.EnableAppearanceFocusedCell = false;
-            // Draw a dotted focus rectangle around the entire row.
-            gridView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-
-
         }
 
 
@@ -48,7 +34,13 @@ namespace CookbookDevxCsharp.lib.gridControl
 
         private void Set_CellsReadOnly(DevExpress.XtraGrid.Views.Grid.GridView gridView)
         {
-            gridView.OptionsBehavior.Editable = false;
+            // Make the grid read-only.
+            gridView1.OptionsBehavior.Editable = false;
+            // Prevent the focused cell from being highlighted.
+            gridView1.OptionsSelection.EnableAppearanceFocusedCell = false;
+            // Draw a dotted focus rectangle around the entire row.
+            gridView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+
         }
 
 
