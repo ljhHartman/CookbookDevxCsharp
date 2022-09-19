@@ -302,7 +302,7 @@
 
         #endregion
 
-        private userControls.UserControlExample userControlExample1;
+        private userControls.ucExmample userControlExample1;
         private DevExpress.XtraBars.Docking.DockManager dockManager1;
         private DevExpress.XtraBars.Docking2010.DocumentManager documentManager1;
         private DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView tabbedView1;

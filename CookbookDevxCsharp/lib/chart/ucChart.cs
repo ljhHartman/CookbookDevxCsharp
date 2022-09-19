@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CookbookDevxCsharp.lib.userControls
+namespace CookbookDevxCsharp.lib2.chart
 {
-    public partial class UserControlExample : UserControl
+    public partial class ucChart : UserControl
     {
-        public UserControlExample()
+        public ucChart()
         {
             InitializeComponent();
         }

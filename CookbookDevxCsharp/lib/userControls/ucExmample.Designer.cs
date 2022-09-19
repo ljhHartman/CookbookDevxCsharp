@@ -1,6 +1,6 @@
 ﻿namespace CookbookDevxCsharp.lib.userControls
 {
-    partial class UserControlExample
+    partial class ucExmample
     {
         /// <summary> 
         /// Required designer variable.

@@ -30,10 +30,18 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.kanbanBoardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tileViewKanbanBoardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.docksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dockManagerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addDockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.chartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.simpleChartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gridControlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gridControlToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.documentManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager();
+            this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView();
+            this.simpleChartToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -41,7 +49,9 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.kanbanBoardToolStripMenuItem,
-            this.docksToolStripMenuItem});
+            this.docksToolStripMenuItem,
+            this.chartToolStripMenuItem,
+            this.gridControlToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1091, 28);
@@ -50,33 +60,69 @@
             // 
             // kanbanBoardToolStripMenuItem
             // 
-            this.kanbanBoardToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tileViewKanbanBoardToolStripMenuItem});
             this.kanbanBoardToolStripMenuItem.Name = "kanbanBoardToolStripMenuItem";
             this.kanbanBoardToolStripMenuItem.Size = new System.Drawing.Size(96, 24);
             this.kanbanBoardToolStripMenuItem.Text = "DevExpress";
             // 
-            // tileViewKanbanBoardToolStripMenuItem
-            // 
-            this.tileViewKanbanBoardToolStripMenuItem.Name = "tileViewKanbanBoardToolStripMenuItem";
-            this.tileViewKanbanBoardToolStripMenuItem.Size = new System.Drawing.Size(242, 26);
-            this.tileViewKanbanBoardToolStripMenuItem.Text = "Tile View Kanban Board";
-            this.tileViewKanbanBoardToolStripMenuItem.Click += new System.EventHandler(this.tileViewKanbanBoardToolStripMenuItem_Click);
-            // 
             // docksToolStripMenuItem
             // 
             this.docksToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dockManagerToolStripMenuItem});
+            this.addDockToolStripMenuItem});
             this.docksToolStripMenuItem.Name = "docksToolStripMenuItem";
             this.docksToolStripMenuItem.Size = new System.Drawing.Size(61, 24);
             this.docksToolStripMenuItem.Text = "Docks";
             // 
-            // dockManagerToolStripMenuItem
+            // addDockToolStripMenuItem
             // 
-            this.dockManagerToolStripMenuItem.Name = "dockManagerToolStripMenuItem";
-            this.dockManagerToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.dockManagerToolStripMenuItem.Text = "DockManager";
-            this.dockManagerToolStripMenuItem.Click += new System.EventHandler(this.dockManagerToolStripMenuItem_Click);
+            this.addDockToolStripMenuItem.Name = "addDockToolStripMenuItem";
+            this.addDockToolStripMenuItem.Size = new System.Drawing.Size(75, 26);
+            // 
+            // chartToolStripMenuItem
+            // 
+            this.chartToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.simpleChartToolStripMenuItem,
+            this.simpleChartToolStripMenuItem1});
+            this.chartToolStripMenuItem.Name = "chartToolStripMenuItem";
+            this.chartToolStripMenuItem.Size = new System.Drawing.Size(56, 24);
+            this.chartToolStripMenuItem.Text = "Chart";
+            // 
+            // simpleChartToolStripMenuItem
+            // 
+            this.simpleChartToolStripMenuItem.Name = "simpleChartToolStripMenuItem";
+            this.simpleChartToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            // 
+            // gridControlToolStripMenuItem
+            // 
+            this.gridControlToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.gridControlToolStripMenuItem1});
+            this.gridControlToolStripMenuItem.Name = "gridControlToolStripMenuItem";
+            this.gridControlToolStripMenuItem.Size = new System.Drawing.Size(98, 24);
+            this.gridControlToolStripMenuItem.Text = "GridControl";
+            // 
+            // gridControlToolStripMenuItem1
+            // 
+            this.gridControlToolStripMenuItem1.Name = "gridControlToolStripMenuItem1";
+            this.gridControlToolStripMenuItem1.Size = new System.Drawing.Size(161, 26);
+            this.gridControlToolStripMenuItem1.Text = "GridControl";
+            this.gridControlToolStripMenuItem1.Click += new System.EventHandler(this.gridControlToolStripMenuItem1_Click);
+            // 
+            // documentManager1
+            // 
+            this.documentManager1.ContainerControl = this;
+            this.documentManager1.View = this.tabbedView1;
+            this.documentManager1.ViewCollection.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseView[] {
+            this.tabbedView1});
+            // 
+            // tabbedView1
+            // 
+            this.tabbedView1.RootContainer.Element = null;
+            // 
+            // simpleChartToolStripMenuItem1
+            // 
+            this.simpleChartToolStripMenuItem1.Name = "simpleChartToolStripMenuItem1";
+            this.simpleChartToolStripMenuItem1.Size = new System.Drawing.Size(216, 26);
+            this.simpleChartToolStripMenuItem1.Text = "Simple Chart";
+            this.simpleChartToolStripMenuItem1.Click += new System.EventHandler(this.simpleChartToolStripMenuItem1_Click);
             // 
             // Form1
             // 
@@ -90,6 +136,8 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -99,9 +147,15 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem kanbanBoardToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem tileViewKanbanBoardToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem docksToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem dockManagerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem chartToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem simpleChartToolStripMenuItem;
+        private DevExpress.XtraBars.Docking2010.DocumentManager documentManager1;
+        private DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView tabbedView1;
+        private System.Windows.Forms.ToolStripMenuItem addDockToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gridControlToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gridControlToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem simpleChartToolStripMenuItem1;
     }
 }
 

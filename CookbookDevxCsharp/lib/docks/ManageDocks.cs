@@ -42,7 +42,7 @@ namespace CookbookDevxCsharp.lib.docks
         {
 
             if (e.Document == userControlExampleDocument)
-                e.Control = new CookbookDevxCsharp.lib.userControls.UserControlExample();
+                e.Control = new CookbookDevxCsharp.lib.userControls.ucExmample();
             if (e.Control == null)
                 e.Control = new System.Windows.Forms.Control();
         }
