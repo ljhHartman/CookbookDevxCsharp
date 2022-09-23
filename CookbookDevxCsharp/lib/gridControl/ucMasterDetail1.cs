@@ -12,7 +12,7 @@ https://www.youtube.com/watch?v=AdHF6FIYUUc&ab_channel=Ho%C3%A0ngHi%E1%BA%BFu
 
 namespace CookbookDevxCsharp.lib.gridControl
 {
-    public partial class ucMasterDetail : UserControl
+    public partial class ucMasterDetail1 : UserControl
     {
         #region Variables
         List<Product> lstProducts;
@@ -22,7 +22,7 @@ namespace CookbookDevxCsharp.lib.gridControl
 
 
         #region Constructers
-        public ucMasterDetail()
+        public ucMasterDetail1()
         {
             InitializeComponent();
 

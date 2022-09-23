@@ -10,5 +10,6 @@ namespace CookbookDevxCsharp.lib.gridControl
     {
         public int KeytID { get; set; }
         public String Name { get; set; }
+        public String City { get; set; }
     }
 }

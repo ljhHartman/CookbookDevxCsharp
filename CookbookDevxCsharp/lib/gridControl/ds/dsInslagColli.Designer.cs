@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace CookbookDevxCsharp.lib.gridControl {
+namespace CookbookDevxCsharp.lib.gridControl.ds {
     
     
     /// <summary>
@@ -27,8 +27,6 @@ namespace CookbookDevxCsharp.lib.gridControl {
         private InslagDataTable tableInslag;
         
         private ColliDataTable tableColli;
-        
-        private global::System.Data.DataRelation relationInslag_Colli;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -220,7 +218,6 @@ namespace CookbookDevxCsharp.lib.gridControl {
                     this.tableColli.InitVars();
                 }
             }
-            this.relationInslag_Colli = this.Relations["Inslag_Colli"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -235,10 +232,6 @@ namespace CookbookDevxCsharp.lib.gridControl {
             base.Tables.Add(this.tableInslag);
             this.tableColli = new ColliDataTable();
             base.Tables.Add(this.tableColli);
-            this.relationInslag_Colli = new global::System.Data.DataRelation("Inslag_Colli", new global::System.Data.DataColumn[] {
-                        this.tableInslag.INSLAGNUMMERColumn}, new global::System.Data.DataColumn[] {
-                        this.tableColli.IDColumn}, false);
-            this.Relations.Add(this.relationInslag_Colli);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4657,17 +4650,6 @@ namespace CookbookDevxCsharp.lib.gridControl {
             public void SetSSLAIRNull() {
                 this[this.tableInslag.SSLAIRColumn] = global::System.Convert.DBNull;
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ColliRow[] GetColliRows() {
-                if ((this.Table.ChildRelations["Inslag_Colli"] == null)) {
-                    return new ColliRow[0];
-                }
-                else {
-                    return ((ColliRow[])(base.GetChildRows(this.Table.ChildRelations["Inslag_Colli"])));
-                }
-            }
         }
         
         /// <summary>
@@ -5609,17 +5591,6 @@ namespace CookbookDevxCsharp.lib.gridControl {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public InslagRow InslagRow {
-                get {
-                    return ((InslagRow)(this.GetParentRow(this.Table.ParentRelations["Inslag_Colli"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["Inslag_Colli"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsINSLAGNUMMERNull() {
                 return this.IsNull(this.tableColli.INSLAGNUMMERColumn);
             }
@@ -6372,7 +6343,7 @@ namespace CookbookDevxCsharp.lib.gridControl {
         }
     }
 }
-namespace CookbookDevxCsharp.lib.gridControl.dsInslagColliTableAdapters {
+namespace CookbookDevxCsharp.lib.gridControl.ds.dsInslagColliTableAdapters {
     
     
     /// <summary>
@@ -7226,9 +7197,8 @@ namespace CookbookDevxCsharp.lib.gridControl.dsInslagColliTableAdapters {
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = @"SELECT INSLAGNUMMER, INSLAGDATUM, SCHEEPDOSSIERNUMMER, LEVERANCIER, KLANTORDERNUMMERS, BOOTNAAM, KLANTNAAM, VERVOERSSOORT, VERVOERDER, VRACHTBRIEFNUMMER, BIJZONDERHEDEN, TOTAAL_AANTAL_COLLIES, TOTAAL_BRUTO_GEWICHT_COLLIES, TOTAAL_NETTO_GEWICHT_COLLIES, TOTAAL_WAARDE_COLLIES, VALUTA_COLLIES, DOUANEDOCUMENT_SOORT, DOUANEDOCUMENT_NUMMER, GOEDERENSOORT_DOUANE, INSLAGTIJD, SCHEEPSNAAM, GOEDERENOMSCHRIJVING, STATUS, UITSLAGNUMMER, UITGESLAGEN, COLLIESGECONFIRMEERD, CONFIRMED, OPDRACHTGEVER, AANLEVERINGTYPE, AFHANDELAAR, ONTVANGER, AIS, MANIFEST, MRN, ECS, DEPOT, LOCATIE, TIR, AGD, ATA, AGENDANUMMER, AGENDA, DEPOTCODE, LOCATIECODE, TOTAAL_WAARDE_COLLIES_EUR, MEDEWERKER, COLLIVERZEGELING, VETERINAIR, MRNGELDIG, INCOTERM, ROWOPEN, ROWOPENBY, SHIPMENTRECEIPT, AANKOMSTDATUM, NAARSHERPA, LOSBEVINDING, LANDOORSPRONG, SOORTDOUANEDOC, INSLAGTYPE, EXWORKS, ADR, TOTAAL_CUBAGE, KOSTCODE, GEGENEREERD, IM7, XMLCOUNTER, SSLAIR, STOCK 
-FROM dbo.Inslag
-WHERE (INSLAGNUMMER  = @INSLAGNUMMER)";
+            this._commandCollection[1].CommandText = @"SELECT INSLAGNUMMER, INSLAGDATUM, SCHEEPDOSSIERNUMMER, LEVERANCIER, KLANTORDERNUMMERS, BOOTNAAM, KLANTNAAM, VERVOERSSOORT, VERVOERDER, VRACHTBRIEFNUMMER, BIJZONDERHEDEN, TOTAAL_AANTAL_COLLIES, TOTAAL_BRUTO_GEWICHT_COLLIES, TOTAAL_NETTO_GEWICHT_COLLIES, TOTAAL_WAARDE_COLLIES, VALUTA_COLLIES, DOUANEDOCUMENT_SOORT, DOUANEDOCUMENT_NUMMER, GOEDERENSOORT_DOUANE, INSLAGTIJD, SCHEEPSNAAM, GOEDERENOMSCHRIJVING, STATUS, UITSLAGNUMMER, UITGESLAGEN, COLLIESGECONFIRMEERD, CONFIRMED, OPDRACHTGEVER, AANLEVERINGTYPE, AFHANDELAAR, ONTVANGER, AIS, MANIFEST, MRN, ECS, DEPOT, LOCATIE, TIR, AGD, ATA, AGENDANUMMER, AGENDA, DEPOTCODE, LOCATIECODE, TOTAAL_WAARDE_COLLIES_EUR, MEDEWERKER, COLLIVERZEGELING, VETERINAIR, MRNGELDIG, INCOTERM, ROWOPEN, ROWOPENBY, SHIPMENTRECEIPT, AANKOMSTDATUM, NAARSHERPA, LOSBEVINDING, LANDOORSPRONG, SOORTDOUANEDOC, INSLAGTYPE, EXWORKS, ADR, TOTAAL_CUBAGE, KOSTCODE, GEGENEREERD, IM7, XMLCOUNTER, SSLAIR, STOCK FROM dbo.Inslag
+WHERE INSLAGNUMMER = @INSLAGNUMMER";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@INSLAGNUMMER", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "INSLAGNUMMER", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }

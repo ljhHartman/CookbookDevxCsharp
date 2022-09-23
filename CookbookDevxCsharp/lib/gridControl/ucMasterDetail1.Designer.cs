@@ -1,6 +1,6 @@
 ﻿namespace CookbookDevxCsharp.lib.gridControl
 {
-    partial class ucMasterDetail
+    partial class ucMasterDetail1
     {
         /// <summary> 
         /// Required designer variable.

@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using System.Collections;
 using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Views.Grid;
+using CookbookDevxCsharp.lib.gridControl.ds;
 
 namespace CookbookDevxCsharp.lib.gridControl
 {
@@ -37,7 +38,7 @@ namespace CookbookDevxCsharp.lib.gridControl
         {
             // Get SqlTable
             dsInslagColli.InslagDataTable ds = new dsInslagColli.InslagDataTable();
-            dsInslagColliTableAdapters.InslagTableAdapter tba = new dsInslagColliTableAdapters.InslagTableAdapter();
+            ds.dsInslagColliTableAdapters.InslagTableAdapter tba = new ds.dsInslagColliTableAdapters.InslagTableAdapter();
             tba.FillBy(ds, 8500);
 
             // Get Column Names
@@ -132,6 +133,11 @@ namespace CookbookDevxCsharp.lib.gridControl
 
             //// Remove Selected Row
             ////gridView1.DeleteSelectedRows();
+        }
+
+        private void gridControl1_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

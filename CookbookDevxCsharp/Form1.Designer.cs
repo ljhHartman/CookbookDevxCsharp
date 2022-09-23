@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.kanbanBoardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.docksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -38,9 +39,11 @@
             this.gridControlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gridControlToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.subRowsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.documentManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager();
-            this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView();
             this.masterDetailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.masterDetail1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.documentManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
+            this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
+            this.readDataSetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
@@ -106,7 +109,9 @@
             this.gridControlToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gridControlToolStripMenuItem1,
             this.subRowsToolStripMenuItem,
-            this.masterDetailToolStripMenuItem});
+            this.masterDetailToolStripMenuItem,
+            this.masterDetail1ToolStripMenuItem,
+            this.readDataSetToolStripMenuItem});
             this.gridControlToolStripMenuItem.Name = "gridControlToolStripMenuItem";
             this.gridControlToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
             this.gridControlToolStripMenuItem.Text = "GridControl";
@@ -125,6 +130,20 @@
             this.subRowsToolStripMenuItem.Text = "Sub Rows";
             this.subRowsToolStripMenuItem.Click += new System.EventHandler(this.subRowsToolStripMenuItem_Click);
             // 
+            // masterDetailToolStripMenuItem
+            // 
+            this.masterDetailToolStripMenuItem.Name = "masterDetailToolStripMenuItem";
+            this.masterDetailToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.masterDetailToolStripMenuItem.Text = "Master-Detail";
+            this.masterDetailToolStripMenuItem.Click += new System.EventHandler(this.masterDetailToolStripMenuItem_Click);
+            // 
+            // masterDetail1ToolStripMenuItem
+            // 
+            this.masterDetail1ToolStripMenuItem.Name = "masterDetail1ToolStripMenuItem";
+            this.masterDetail1ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.masterDetail1ToolStripMenuItem.Text = "Master-Detail1";
+            this.masterDetail1ToolStripMenuItem.Click += new System.EventHandler(this.masterDetail1ToolStripMenuItem_Click);
+            // 
             // documentManager1
             // 
             this.documentManager1.ContainerControl = this;
@@ -136,12 +155,12 @@
             // 
             this.tabbedView1.RootContainer.Element = null;
             // 
-            // masterDetailToolStripMenuItem
+            // readDataSetToolStripMenuItem
             // 
-            this.masterDetailToolStripMenuItem.Name = "masterDetailToolStripMenuItem";
-            this.masterDetailToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.masterDetailToolStripMenuItem.Text = "Master-Detail";
-            this.masterDetailToolStripMenuItem.Click += new System.EventHandler(this.masterDetailToolStripMenuItem_Click);
+            this.readDataSetToolStripMenuItem.Name = "readDataSetToolStripMenuItem";
+            this.readDataSetToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.readDataSetToolStripMenuItem.Text = "Read DataSet";
+            this.readDataSetToolStripMenuItem.Click += new System.EventHandler(this.readDataSetToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -178,6 +197,8 @@
         private System.Windows.Forms.ToolStripMenuItem simpleChartToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem subRowsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem masterDetailToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem masterDetail1ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem readDataSetToolStripMenuItem;
     }
 }
 

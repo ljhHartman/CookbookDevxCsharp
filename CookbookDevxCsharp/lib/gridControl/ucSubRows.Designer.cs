@@ -31,9 +31,8 @@
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.vGridControl1 = new DevExpress.XtraVerticalGrid.VGridControl();
-            this.dsTable = new CookbookDevxCsharp.dsTable();
             this.contactpersonenBindingSource = new System.Windows.Forms.BindingSource();
-            this.contactpersonenTableAdapter = new CookbookDevxCsharp.dsTableTableAdapters.ContactpersonenTableAdapter();
+            this.dsTable = new CookbookDevxCsharp.dsTable();
             this.rowCONTACTID = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
             this.rowRELATIECODE = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
             this.rowCONTACTPERSOON = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
@@ -41,11 +40,12 @@
             this.rowTELEFOON = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
             this.rowROWOPEN = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
             this.rowROWOPENBY = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
+            this.contactpersonenTableAdapter = new CookbookDevxCsharp.dsTableTableAdapters.ContactpersonenTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vGridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsTable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contactpersonenBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsTable)).BeginInit();
             this.SuspendLayout();
             // 
             // gridControl1
@@ -60,6 +60,7 @@
             this.gridControl1.TabIndex = 2;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            this.gridControl1.Click += new System.EventHandler(this.gridControl1_Click_1);
             // 
             // gridView1
             // 
@@ -82,19 +83,15 @@
             this.vGridControl1.Size = new System.Drawing.Size(400, 200);
             this.vGridControl1.TabIndex = 3;
             // 
-            // dsTable
-            // 
-            this.dsTable.DataSetName = "dsTable";
-            this.dsTable.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // contactpersonenBindingSource
             // 
             this.contactpersonenBindingSource.DataMember = "Contactpersonen";
             this.contactpersonenBindingSource.DataSource = this.dsTable;
             // 
-            // contactpersonenTableAdapter
+            // dsTable
             // 
-            this.contactpersonenTableAdapter.ClearBeforeFill = true;
+            this.dsTable.DataSetName = "dsTable";
+            this.dsTable.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // rowCONTACTID
             // 
@@ -138,6 +135,10 @@
             this.rowROWOPENBY.Properties.Caption = "ROWOPENBY";
             this.rowROWOPENBY.Properties.FieldName = "ROWOPENBY";
             // 
+            // contactpersonenTableAdapter
+            // 
+            this.contactpersonenTableAdapter.ClearBeforeFill = true;
+            // 
             // ucSubRows
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -149,8 +150,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vGridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsTable)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.contactpersonenBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsTable)).EndInit();
             this.ResumeLayout(false);
 
         }

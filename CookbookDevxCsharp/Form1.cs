@@ -65,11 +65,31 @@ namespace CookbookDevxCsharp
 
         private void masterDetailToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //DockManager dockManager1 = new DockManager(this);
+            //DockPanel panelGridControl = dockManager1.AddPanel(DockingStyle.Top);
+
+            //panelGridControl.Text = "Master-Detail";
+            //lib.gridControl.ucMasterDetail md = new lib.gridControl.ucMasterDetail();
+            //panelGridControl.ControlContainer.Controls.Add(md);
+        }
+
+        private void masterDetail1ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //DockManager dockManager1 = new DockManager(this);
+            //DockPanel panelGridControl = dockManager1.AddPanel(DockingStyle.Top);
+
+            //panelGridControl.Text = "Master-Detail";
+            //lib.gridControl.ucMasterDetail1 md = new lib.gridControl.ucMasterDetail1();
+            //panelGridControl.ControlContainer.Controls.Add(md);
+        }
+
+        private void readDataSetToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             DockManager dockManager1 = new DockManager(this);
             DockPanel panelGridControl = dockManager1.AddPanel(DockingStyle.Top);
 
-            panelGridControl.Text = "Master-Detail";
-            lib.gridControl.ucMasterDetail md = new lib.gridControl.ucMasterDetail();
+            panelGridControl.Text = "Read DataSet";
+            lib.gridControl.ucReadDataSet md = new lib.gridControl.ucReadDataSet();
             panelGridControl.ControlContainer.Controls.Add(md);
         }
     }
