@@ -52,5 +52,25 @@ namespace CookbookDevxCsharp
             lib2.chart.ucChart ucChart = new lib2.chart.ucChart();
             panelChart.ControlContainer.Controls.Add(ucChart);
         }
+
+        private void subRowsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DockManager dockManager1 = new DockManager(this);
+            DockPanel panelGridControl = dockManager1.AddPanel(DockingStyle.Top);
+
+            panelGridControl.Text = "Sub Rows";
+            lib.gridControl.ucSubRows subRows = new lib.gridControl.ucSubRows();
+            panelGridControl.ControlContainer.Controls.Add(subRows);
+        }
+
+        private void masterDetailToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DockManager dockManager1 = new DockManager(this);
+            DockPanel panelGridControl = dockManager1.AddPanel(DockingStyle.Top);
+
+            panelGridControl.Text = "Master-Detail";
+            lib.gridControl.ucMasterDetail md = new lib.gridControl.ucMasterDetail();
+            panelGridControl.ControlContainer.Controls.Add(md);
+        }
     }
 }

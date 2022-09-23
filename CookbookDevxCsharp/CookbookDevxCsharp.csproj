@@ -47,6 +47,7 @@
     <Reference Include="DevExpress.XtraGrid.v16.2, Version=16.2.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v16.2, Version=16.2.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v16.2, Version=16.2.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v16.2, Version=16.2.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -86,17 +87,36 @@
     <Compile Include="lib\docks\ManageDocks.Designer.cs">
       <DependentUpon>ManageDocks.cs</DependentUpon>
     </Compile>
+    <Compile Include="lib\gridControl\Category.cs" />
+    <Compile Include="lib\gridControl\dsInslagColli.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsInslagColli.xsd</DependentUpon>
+    </Compile>
     <Compile Include="lib\gridControl\frmKanban.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="lib\gridControl\frmKanban.Designer.cs">
       <DependentUpon>frmKanban.cs</DependentUpon>
     </Compile>
+    <Compile Include="lib\gridControl\Product.cs" />
     <Compile Include="lib\gridControl\ucGridControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="lib\gridControl\ucGridControl.Designer.cs">
       <DependentUpon>ucGridControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lib\gridControl\ucMasterDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="lib\gridControl\ucMasterDetail.Designer.cs">
+      <DependentUpon>ucMasterDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lib\gridControl\ucSubRows.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="lib\gridControl\ucSubRows.Designer.cs">
+      <DependentUpon>ucSubRows.cs</DependentUpon>
     </Compile>
     <Compile Include="lib\list\DataSetExample.cs" />
     <Compile Include="lib\userControls\ucExmample.cs">
@@ -132,6 +152,12 @@
     <EmbeddedResource Include="lib\gridControl\ucGridControl.resx">
       <DependentUpon>ucGridControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="lib\gridControl\ucMasterDetail.resx">
+      <DependentUpon>ucMasterDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lib\gridControl\ucSubRows.resx">
+      <DependentUpon>ucSubRows.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="lib\userControls\ucExmample.resx">
       <DependentUpon>ucExmample.cs</DependentUpon>
     </EmbeddedResource>
@@ -155,6 +181,17 @@
     </None>
     <None Include="dsTable.xss">
       <DependentUpon>dsTable.xsd</DependentUpon>
+    </None>
+    <None Include="lib\gridControl\dsInslagColli.xsc">
+      <DependentUpon>dsInslagColli.xsd</DependentUpon>
+    </None>
+    <None Include="lib\gridControl\dsInslagColli.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsInslagColli.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="lib\gridControl\dsInslagColli.xss">
+      <DependentUpon>dsInslagColli.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

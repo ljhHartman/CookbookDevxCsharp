@@ -34,11 +34,13 @@
             this.addDockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.simpleChartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.simpleChartToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.gridControlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gridControlToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.subRowsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.documentManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager();
             this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView();
-            this.simpleChartToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.masterDetailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
@@ -54,14 +56,15 @@
             this.gridControlToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1091, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1181, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // kanbanBoardToolStripMenuItem
             // 
             this.kanbanBoardToolStripMenuItem.Name = "kanbanBoardToolStripMenuItem";
-            this.kanbanBoardToolStripMenuItem.Size = new System.Drawing.Size(96, 24);
+            this.kanbanBoardToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
             this.kanbanBoardToolStripMenuItem.Text = "DevExpress";
             // 
             // docksToolStripMenuItem
@@ -69,13 +72,13 @@
             this.docksToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addDockToolStripMenuItem});
             this.docksToolStripMenuItem.Name = "docksToolStripMenuItem";
-            this.docksToolStripMenuItem.Size = new System.Drawing.Size(61, 24);
+            this.docksToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
             this.docksToolStripMenuItem.Text = "Docks";
             // 
             // addDockToolStripMenuItem
             // 
             this.addDockToolStripMenuItem.Name = "addDockToolStripMenuItem";
-            this.addDockToolStripMenuItem.Size = new System.Drawing.Size(75, 26);
+            this.addDockToolStripMenuItem.Size = new System.Drawing.Size(67, 22);
             // 
             // chartToolStripMenuItem
             // 
@@ -83,28 +86,44 @@
             this.simpleChartToolStripMenuItem,
             this.simpleChartToolStripMenuItem1});
             this.chartToolStripMenuItem.Name = "chartToolStripMenuItem";
-            this.chartToolStripMenuItem.Size = new System.Drawing.Size(56, 24);
+            this.chartToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.chartToolStripMenuItem.Text = "Chart";
             // 
             // simpleChartToolStripMenuItem
             // 
             this.simpleChartToolStripMenuItem.Name = "simpleChartToolStripMenuItem";
-            this.simpleChartToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.simpleChartToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            // 
+            // simpleChartToolStripMenuItem1
+            // 
+            this.simpleChartToolStripMenuItem1.Name = "simpleChartToolStripMenuItem1";
+            this.simpleChartToolStripMenuItem1.Size = new System.Drawing.Size(142, 22);
+            this.simpleChartToolStripMenuItem1.Text = "Simple Chart";
+            this.simpleChartToolStripMenuItem1.Click += new System.EventHandler(this.simpleChartToolStripMenuItem1_Click);
             // 
             // gridControlToolStripMenuItem
             // 
             this.gridControlToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.gridControlToolStripMenuItem1});
+            this.gridControlToolStripMenuItem1,
+            this.subRowsToolStripMenuItem,
+            this.masterDetailToolStripMenuItem});
             this.gridControlToolStripMenuItem.Name = "gridControlToolStripMenuItem";
-            this.gridControlToolStripMenuItem.Size = new System.Drawing.Size(98, 24);
+            this.gridControlToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
             this.gridControlToolStripMenuItem.Text = "GridControl";
             // 
             // gridControlToolStripMenuItem1
             // 
             this.gridControlToolStripMenuItem1.Name = "gridControlToolStripMenuItem1";
-            this.gridControlToolStripMenuItem1.Size = new System.Drawing.Size(161, 26);
+            this.gridControlToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.gridControlToolStripMenuItem1.Text = "GridControl";
             this.gridControlToolStripMenuItem1.Click += new System.EventHandler(this.gridControlToolStripMenuItem1_Click);
+            // 
+            // subRowsToolStripMenuItem
+            // 
+            this.subRowsToolStripMenuItem.Name = "subRowsToolStripMenuItem";
+            this.subRowsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.subRowsToolStripMenuItem.Text = "Sub Rows";
+            this.subRowsToolStripMenuItem.Click += new System.EventHandler(this.subRowsToolStripMenuItem_Click);
             // 
             // documentManager1
             // 
@@ -117,20 +136,21 @@
             // 
             this.tabbedView1.RootContainer.Element = null;
             // 
-            // simpleChartToolStripMenuItem1
+            // masterDetailToolStripMenuItem
             // 
-            this.simpleChartToolStripMenuItem1.Name = "simpleChartToolStripMenuItem1";
-            this.simpleChartToolStripMenuItem1.Size = new System.Drawing.Size(216, 26);
-            this.simpleChartToolStripMenuItem1.Text = "Simple Chart";
-            this.simpleChartToolStripMenuItem1.Click += new System.EventHandler(this.simpleChartToolStripMenuItem1_Click);
+            this.masterDetailToolStripMenuItem.Name = "masterDetailToolStripMenuItem";
+            this.masterDetailToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.masterDetailToolStripMenuItem.Text = "Master-Detail";
+            this.masterDetailToolStripMenuItem.Click += new System.EventHandler(this.masterDetailToolStripMenuItem_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1091, 581);
+            this.ClientSize = new System.Drawing.Size(1181, 606);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -156,6 +176,8 @@
         private System.Windows.Forms.ToolStripMenuItem gridControlToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gridControlToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem simpleChartToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem subRowsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem masterDetailToolStripMenuItem;
     }
 }
 
