@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CookbookDevxCsharp.lib.gridControl.enity
+namespace CookbookDevxCsharp.lib.enity
 {
     class Inslag
     {
         public int INSLAGNUMMER { get; set; }
-        public Boolean AGENDA { get; set; }
+        public bool AGENDA { get; set; }
         public string STATUS { get; set; }
         public string LEVERANCIER { get; set; }
         public int SCHEEPDOSSIERNUMMER { get; set; }
@@ -49,6 +49,5 @@ namespace CookbookDevxCsharp.lib.gridControl.enity
         public string TIR { get; set; }
         public string AGD { get; set; }
         public string ATA { get; set; }
-
     }
 }

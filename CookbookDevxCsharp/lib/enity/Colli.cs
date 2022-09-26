@@ -4,26 +4,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CookbookDevxCsharp.lib.gridControl.enity
+namespace CookbookDevxCsharp.lib.enity
 {
     class Colli
     {
         public int ID { get; set; }
-        public Boolean AGENDA { get; set; }
+        //public Boolean AGENDA { get; set; }
         public int INSLAGNUMMER { get; set; }
-        public float BRUTOGEWICHT { get; set; }
+        //public float BRUTOGEWICHT { get; set; }
         public int AGENDANUMMER { get; set; }
         public string STATUS { get; set; }
-        public float NETTOGEWICHT { get; set; }
+        //public float NETTOGEWICHT { get; set; }
         public float WAARDE { get; set; }
         public string VALUTA { get; set; }
         public string DOUANEDOCUMENT_SOORT { get; set; }
         public string DOUANEDOCUMENT_NUMMER { get; set; }
         public string GOEDERENSOORT_DOUANE { get; set; }
         public string KLANTORDERNUMMERS { get; set; }
-        public float LENGTE { get; set; }
-        public float BREEDTE { get; set; }
-        public float HOOGTE { get; set; }
+        //public float LENGTE { get; set; }
+        //public float BREEDTE { get; set; }
+        //public float HOOGTE { get; set; }
         public string GOEDERENOMSCHRIJVING { get; set; }
         public string U_DOUANEDOCUMENT_SOORT { get; set; }
         public string U_DOUANEDOCUMENT_NUMMER { get; set; }

@@ -43,6 +43,7 @@
             this.readDataSetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.documentManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
             this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
+            this.masterDetail2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
@@ -109,7 +110,8 @@
             this.gridControlToolStripMenuItem1,
             this.masterDetailToolStripMenuItem,
             this.masterDetail1ToolStripMenuItem,
-            this.readDataSetToolStripMenuItem});
+            this.readDataSetToolStripMenuItem,
+            this.masterDetail2ToolStripMenuItem});
             this.gridControlToolStripMenuItem.Name = "gridControlToolStripMenuItem";
             this.gridControlToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
             this.gridControlToolStripMenuItem.Text = "GridControl";
@@ -153,6 +155,13 @@
             // 
             this.tabbedView1.RootContainer.Element = null;
             // 
+            // masterDetail2ToolStripMenuItem
+            // 
+            this.masterDetail2ToolStripMenuItem.Name = "masterDetail2ToolStripMenuItem";
+            this.masterDetail2ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.masterDetail2ToolStripMenuItem.Text = "Master-Detail2";
+            this.masterDetail2ToolStripMenuItem.Click += new System.EventHandler(this.masterDetail2ToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -189,6 +198,7 @@
         private System.Windows.Forms.ToolStripMenuItem masterDetailToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem masterDetail1ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem readDataSetToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem masterDetail2ToolStripMenuItem;
     }
 }
 

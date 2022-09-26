@@ -5,9 +5,9 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CookbookDevxCsharp.lib.gridControl.ds;
+using CookbookDevxCsharp.lib.ds;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using CookbookDevxCsharp.lib.gridControl.ds;
+using CookbookDevxCsharp.lib.ds;
 
 namespace CookbookDevxCsharp.lib.test
 {
@@ -21,7 +21,7 @@ namespace CookbookDevxCsharp.lib.test
         {
             // Get SqlTable
             var ds = new dsInslagColli.InslagDataTable();
-            var tba = new gridControl.ds.dsInslagColliTableAdapters.InslagTableAdapter();
+            var tba = new ds.dsInslagColliTableAdapters.InslagTableAdapter();
             tba.FillBy(ds, 8500);
 
             // Get Column Names

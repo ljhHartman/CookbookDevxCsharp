@@ -15,6 +15,18 @@ namespace CookbookDevxCsharp.lib.test
     public class Test
     {
 
+        [TestMethod]
+        public void checkNull()
+        {
+             string s = null;
+
+
+
+
+
+
+        }
+
 
         [TestMethod]
         public void GetTabaleAdapterData()

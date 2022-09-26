@@ -92,26 +92,32 @@
     <Compile Include="lib\docks\ManageDocks.Designer.cs">
       <DependentUpon>ManageDocks.cs</DependentUpon>
     </Compile>
-    <Compile Include="lib\gridControl\ds\dsInslagColli.Designer.cs">
+    <Compile Include="lib\ds\dsInslagColli.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsInslagColli.xsd</DependentUpon>
     </Compile>
-    <Compile Include="lib\gridControl\enity\Category.cs" />
-    <Compile Include="lib\gridControl\enity\Colli.cs" />
-    <Compile Include="lib\gridControl\enity\Inslag.cs" />
+    <Compile Include="lib\enity\Category.cs" />
+    <Compile Include="lib\enity\Colli.cs" />
+    <Compile Include="lib\enity\Inslag.cs" />
     <Compile Include="lib\gridControl\frmKanban.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="lib\gridControl\frmKanban.Designer.cs">
       <DependentUpon>frmKanban.cs</DependentUpon>
     </Compile>
-    <Compile Include="lib\gridControl\enity\Product.cs" />
+    <Compile Include="lib\enity\Product.cs" />
     <Compile Include="lib\gridControl\ucGridControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="lib\gridControl\ucGridControl.Designer.cs">
       <DependentUpon>ucGridControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lib\gridControl\ucMasterDetail2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="lib\gridControl\ucMasterDetail2.Designer.cs">
+      <DependentUpon>ucMasterDetail2.cs</DependentUpon>
     </Compile>
     <Compile Include="lib\gridControl\ucMasterDetail1.cs">
       <SubType>UserControl</SubType>
@@ -171,6 +177,9 @@
     <EmbeddedResource Include="lib\gridControl\ucGridControl.resx">
       <DependentUpon>ucGridControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="lib\gridControl\ucMasterDetail2.resx">
+      <DependentUpon>ucMasterDetail2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="lib\gridControl\ucMasterDetail1.resx">
       <DependentUpon>ucMasterDetail1.cs</DependentUpon>
     </EmbeddedResource>
@@ -204,15 +213,15 @@
     <None Include="dsTable.xss">
       <DependentUpon>dsTable.xsd</DependentUpon>
     </None>
-    <None Include="lib\gridControl\ds\dsInslagColli.xsc">
+    <None Include="lib\ds\dsInslagColli.xsc">
       <DependentUpon>dsInslagColli.xsd</DependentUpon>
     </None>
-    <None Include="lib\gridControl\ds\dsInslagColli.xsd">
+    <None Include="lib\ds\dsInslagColli.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>dsInslagColli.Designer.cs</LastGenOutput>
     </None>
-    <None Include="lib\gridControl\ds\dsInslagColli.xss">
+    <None Include="lib\ds\dsInslagColli.xss">
       <DependentUpon>dsInslagColli.xsd</DependentUpon>
     </None>
     <None Include="lib\ds\dsCategory.xsc">
