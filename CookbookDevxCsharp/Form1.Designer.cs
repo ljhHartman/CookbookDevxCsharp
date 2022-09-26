@@ -38,12 +38,11 @@
             this.simpleChartToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.gridControlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gridControlToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.subRowsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.masterDetailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.masterDetail1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.readDataSetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.documentManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
             this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
-            this.readDataSetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
@@ -108,7 +107,6 @@
             // 
             this.gridControlToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gridControlToolStripMenuItem1,
-            this.subRowsToolStripMenuItem,
             this.masterDetailToolStripMenuItem,
             this.masterDetail1ToolStripMenuItem,
             this.readDataSetToolStripMenuItem});
@@ -122,13 +120,6 @@
             this.gridControlToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.gridControlToolStripMenuItem1.Text = "GridControl";
             this.gridControlToolStripMenuItem1.Click += new System.EventHandler(this.gridControlToolStripMenuItem1_Click);
-            // 
-            // subRowsToolStripMenuItem
-            // 
-            this.subRowsToolStripMenuItem.Name = "subRowsToolStripMenuItem";
-            this.subRowsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.subRowsToolStripMenuItem.Text = "Sub Rows";
-            this.subRowsToolStripMenuItem.Click += new System.EventHandler(this.subRowsToolStripMenuItem_Click);
             // 
             // masterDetailToolStripMenuItem
             // 
@@ -144,6 +135,13 @@
             this.masterDetail1ToolStripMenuItem.Text = "Master-Detail1";
             this.masterDetail1ToolStripMenuItem.Click += new System.EventHandler(this.masterDetail1ToolStripMenuItem_Click);
             // 
+            // readDataSetToolStripMenuItem
+            // 
+            this.readDataSetToolStripMenuItem.Name = "readDataSetToolStripMenuItem";
+            this.readDataSetToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.readDataSetToolStripMenuItem.Text = "Read DataSet";
+            this.readDataSetToolStripMenuItem.Click += new System.EventHandler(this.readDataSetToolStripMenuItem_Click);
+            // 
             // documentManager1
             // 
             this.documentManager1.ContainerControl = this;
@@ -154,13 +152,6 @@
             // tabbedView1
             // 
             this.tabbedView1.RootContainer.Element = null;
-            // 
-            // readDataSetToolStripMenuItem
-            // 
-            this.readDataSetToolStripMenuItem.Name = "readDataSetToolStripMenuItem";
-            this.readDataSetToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.readDataSetToolStripMenuItem.Text = "Read DataSet";
-            this.readDataSetToolStripMenuItem.Click += new System.EventHandler(this.readDataSetToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -195,7 +186,6 @@
         private System.Windows.Forms.ToolStripMenuItem gridControlToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gridControlToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem simpleChartToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem subRowsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem masterDetailToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem masterDetail1ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem readDataSetToolStripMenuItem;

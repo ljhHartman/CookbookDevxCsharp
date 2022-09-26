@@ -43,6 +43,8 @@ namespace CookbookDevxCsharp
             panelGridControl.ControlContainer.Controls.Add(gc);
         }
 
+
+
         private void simpleChartToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             DockManager dockManager1 = new DockManager(this);
@@ -53,35 +55,31 @@ namespace CookbookDevxCsharp
             panelChart.ControlContainer.Controls.Add(ucChart);
         }
 
-        private void subRowsToolStripMenuItem_Click(object sender, EventArgs e)
+
+
+        private void masterDetailToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DockManager dockManager1 = new DockManager(this);
             DockPanel panelGridControl = dockManager1.AddPanel(DockingStyle.Top);
 
-            panelGridControl.Text = "Sub Rows";
-            lib.gridControl.ucSubRows subRows = new lib.gridControl.ucSubRows();
-            panelGridControl.ControlContainer.Controls.Add(subRows);
+            panelGridControl.Text = "Master-Detail";
+            lib.gridControl.ucMasterDetail md = new lib.gridControl.ucMasterDetail();
+            panelGridControl.ControlContainer.Controls.Add(md);
         }
 
-        private void masterDetailToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //DockManager dockManager1 = new DockManager(this);
-            //DockPanel panelGridControl = dockManager1.AddPanel(DockingStyle.Top);
 
-            //panelGridControl.Text = "Master-Detail";
-            //lib.gridControl.ucMasterDetail md = new lib.gridControl.ucMasterDetail();
-            //panelGridControl.ControlContainer.Controls.Add(md);
-        }
 
         private void masterDetail1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //DockManager dockManager1 = new DockManager(this);
-            //DockPanel panelGridControl = dockManager1.AddPanel(DockingStyle.Top);
+            DockManager dockManager1 = new DockManager(this);
+            DockPanel panelGridControl = dockManager1.AddPanel(DockingStyle.Top);
 
-            //panelGridControl.Text = "Master-Detail";
-            //lib.gridControl.ucMasterDetail1 md = new lib.gridControl.ucMasterDetail1();
-            //panelGridControl.ControlContainer.Controls.Add(md);
+            panelGridControl.Text = "Master-Detail";
+            lib.gridControl.ucMasterDetail1 md = new lib.gridControl.ucMasterDetail1();
+            panelGridControl.ControlContainer.Controls.Add(md);
         }
+
+
 
         private void readDataSetToolStripMenuItem_Click(object sender, EventArgs e)
         {

@@ -92,5 +92,10 @@ namespace CookbookDevxCsharp.lib.gridControl
             e.RelationName = "Detail";
         }
         #endregion
+
+        private void gctMain_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
+using CookbookDevxCsharp.lib.ds;
 using DevExpress.XtraGrid.Views.Grid;
 
 /*
@@ -17,6 +18,10 @@ namespace CookbookDevxCsharp.lib.gridControl
         #region Variables
         List<Product> lstProducts;
         List<Category> lstCategories;
+        dsCategory.CategoryDataTable dsCat = new dsCategory.CategoryDataTable();
+        lib.ds.dsCategoryTableAdapters.CategoryTableAdapter tbaCat = new lib.ds.dsCategoryTableAdapters.CategoryTableAdapter();
+        dsCategory.ProductDataTable dsPro = new dsCategory.ProductDataTable();
+        lib.ds.dsCategoryTableAdapters.ProductTableAdapter tbaPro = new lib.ds.dsCategoryTableAdapters.ProductTableAdapter();
         #endregion
 
 
@@ -39,17 +44,52 @@ namespace CookbookDevxCsharp.lib.gridControl
         #region Method
         private void loadData()
         {
+            // Get SqlTable "Catergory"
+            var dsCat = new dsCategory.CategoryDataTable();
+            var tbaCat = new lib.ds.dsCategoryTableAdapters.CategoryTableAdapter();
+            tbaCat.Fill(dsCat);
+
+            // Get SqlTable "Product"
+            var dsPro = new dsCategory.ProductDataTable();
+            var tbaPro = new lib.ds.dsCategoryTableAdapters.ProductTableAdapter();
+            tbaPro.Fill(dsPro);
+
+            // Dataset to List "lstCategories"
             lstCategories = new List<Category>();
+            foreach (DataRow row in dsCat.Rows)
+            {
+                lstCategories.Add(new Category()
+                {
+                    KeytID = (int)row["KeytID"],
+                    Name = (string)row["Name"],
+                    City = (string)row["City"]
+                });
+            }
+
+            // Print List "lstCategories"
+            for (int i = 0; i < lstCategories.Count; i++)
+            {
+                Console.WriteLine($"listCatergory: { lstCategories[i].KeytID }, { lstCategories[i].Name }, { lstCategories[i].City }");
+            }
+
+            // Dataset to List "lstProducts"
             lstProducts = new List<Product>();
+            foreach (DataRow row in dsPro.Rows)
+            {
+                lstProducts.Add(new Product()
+                {
+                    KeyID = (int)row["KeytID"],
+                    Name = (string)row["Name"],
+                    Author = (string)row["Author"],
+                    IDCategory = (int)row["IDCategory"]
+                });
+            }
 
-            lstCategories.Add(new Category() { KeytID = 1, Name = "Adventure", City = "Amsterdam" });
-            lstCategories.Add(new Category() { KeytID = 2, Name = "Children", City = "Rotterdam" });
-            lstCategories.Add(new Category() { KeytID = 3, Name = "Computer", City = "Breda" });
-
-            lstProducts.Add(new Product() { KeyID = 1, Name = "The Secret Of The Druids", Author = "Christopher C. Doyle", IDCategory = 1  });
-            lstProducts.Add(new Product() { KeyID = 2, Name = "The Secret Of The Druids", Author = "Christopher C. Doyle", IDCategory = 1 });
-            lstProducts.Add(new Product() { KeyID = 3, Name = "The Secret Of The Druids", Author = "Christopher C. Doyle", IDCategory = 2 });
-            lstProducts.Add(new Product() { KeyID = 4, Name = "The Secret Of The Druids", Author = "Christopher C. Doyle", IDCategory = 3 });
+            // Print List "lstProducts"
+            for (int i = 0; i < lstProducts.Count; i++)
+            {
+                Console.WriteLine($"lstProducts: { lstProducts[i].KeyID }, { lstProducts[i].Name }, { lstProducts[i].Author }, { lstProducts[i].IDCategory }");
+            }
 
             gctMain.DataSource = lstCategories;
         }

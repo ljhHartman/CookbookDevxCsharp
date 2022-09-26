@@ -77,6 +77,7 @@
             this.gctMain.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grvMain,
             this.grvDetail});
+            this.gctMain.Click += new System.EventHandler(this.gctMain_Click);
             // 
             // grvMain
             // 

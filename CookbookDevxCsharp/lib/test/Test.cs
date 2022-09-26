@@ -5,9 +5,9 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CookbookDevxCsharp.lib.gridControl.ds;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using CookbookDevxCsharp.lib.gridControl.ds;
+using CookbookDevxCsharp.lib.ds;
+using CookbookDevxCsharp.lib.gridControl;
 
 namespace CookbookDevxCsharp.lib.test
 {
@@ -15,35 +15,97 @@ namespace CookbookDevxCsharp.lib.test
     public class Test
     {
 
-        [TestMethod]
-        public void TestMethod1()
-        {
-            Console.WriteLine("hallo");
-
-            var dsInslag = new dsInslagColli.InslagDataTable();
-            var tbaInslag = new gridControl.ds.dsInslagColliTableAdapters.InslagTableAdapter();
-
-            var dsColli = new dsInslagColli.ColliDataTable();
-            var tbaColli = new gridControl.ds.dsInslagColliTableAdapters.ColliTableAdapter();
-        }
-
 
         [TestMethod]
         public void GetTabaleAdapterData()
         {
-            // Get SqlTable
-            dsInslagColli.InslagDataTable ds = new dsInslagColli.InslagDataTable();
-            var tba = new gridControl.ds.dsInslagColliTableAdapters.InslagTableAdapter();
-            tba.FillBy(ds, 8500);
-
-            // Get Column Names
-            var colNames = new ArrayList();
-            foreach (DataColumn column in ds.Columns)
+            // Get SqlTable "Catergory"
+            var dsCat = new dsCategory.CategoryDataTable();
+            var tbaCat = new ds.dsCategoryTableAdapters.CategoryTableAdapter();
+            tbaCat.Fill(dsCat);
+            // Row Values
+            foreach (DataRow row in dsCat.Rows)
             {
-                Console.WriteLine($"Column Name: {column.ColumnName}");
-                colNames.Add(column);
+                Console.WriteLine($"Catergory: {row[0]}, {row[1]}, {row[2]}");
+            }
+
+
+            // Get SqlTable "Product"
+            var dsPro = new dsCategory.ProductDataTable();
+            var tbaPro = new ds.dsCategoryTableAdapters.ProductTableAdapter();
+            tbaPro.Fill(dsPro);
+            // Row Values
+            foreach (DataRow row in dsPro.Rows)
+            {
+                Console.WriteLine($"Product: {row[0]}, {row[1]}, {row[2]}, {row[3]}");
             }
         }
+
+
+        [TestMethod]
+        public void SQLTableToList()
+        {
+            // Get SqlTable "Catergory"
+            var dsCat = new dsCategory.CategoryDataTable();
+            var tbaCat = new ds.dsCategoryTableAdapters.CategoryTableAdapter();
+            tbaCat.Fill(dsCat);
+
+            // Get SqlTable "Product"
+            var dsPro = new dsCategory.ProductDataTable();
+            var tbaPro = new ds.dsCategoryTableAdapters.ProductTableAdapter();
+            tbaPro.Fill(dsPro);
+
+            // Declare List
+            List<Product> lstProducts;
+            List<Category> lstCategories;
+            lstCategories = new List<Category>();
+            lstProducts = new List<Product>();
+
+            // Dataset to List "lstCategories"
+            foreach (DataRow row in dsCat.Rows)
+            {  
+                lstCategories.Add(new Category()
+                {
+                    KeytID = (int)row["KeytID"],
+                    Name = (string)row["Name"],
+                    City = (string)row["City"]
+                });
+            }
+
+            // Print List "lstCategories"
+            for (int i = 0; i < lstCategories.Count; i++)
+            {
+                Console.WriteLine($"listCatergory: { lstCategories[i].KeytID }, { lstCategories[i].Name }, { lstCategories[i].City }");
+            }
+
+            // Dataset to List "lstProducts"
+            foreach (DataRow row in dsPro.Rows)
+            {
+                lstProducts.Add(new Product()
+                {
+                    KeyID = (int)row["KeytID"],
+                    Name = (string)row["Name"],
+                    Author = (string)row["Author"],
+                    IDCategory = (int)row["IDCategory"]
+                });
+            }
+
+            // Print List "lstProducts"
+            for (int i = 0; i < lstProducts.Count; i++)
+            {
+                Console.WriteLine($"lstProducts: { lstProducts[i].KeyID }, { lstProducts[i].Name }, { lstProducts[i].Author }, { lstProducts[i].IDCategory }");
+            }
+
+        }
+
+
+
+
+
+
+
+
+
 
     }
 }

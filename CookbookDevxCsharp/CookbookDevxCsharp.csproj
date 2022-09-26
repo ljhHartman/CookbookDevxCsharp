@@ -84,6 +84,8 @@
     <Compile Include="lib\chart\ucChart.Designer.cs">
       <DependentUpon>ucChart.cs</DependentUpon>
     </Compile>
+    <Compile Include="lib\dataset\SqlTableToList.cs" />
+    <Compile Include="lib\dataset\get_Table.cs" />
     <Compile Include="lib\docks\ManageDocks.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,13 +131,12 @@
     <Compile Include="lib\gridControl\ucReadDataSet.Designer.cs">
       <DependentUpon>ucReadDataSet.cs</DependentUpon>
     </Compile>
-    <Compile Include="lib\gridControl\ucSubRows.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="lib\gridControl\ucSubRows.Designer.cs">
-      <DependentUpon>ucSubRows.cs</DependentUpon>
-    </Compile>
     <Compile Include="lib\list\DataSetExample.cs" />
+    <Compile Include="lib\ds\dsCategory.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsCategory.xsd</DependentUpon>
+    </Compile>
     <Compile Include="lib\test\Test.cs" />
     <Compile Include="lib\userControls\ucExmample.cs">
       <SubType>UserControl</SubType>
@@ -179,9 +180,6 @@
     <EmbeddedResource Include="lib\gridControl\ucReadDataSet.resx">
       <DependentUpon>ucReadDataSet.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="lib\gridControl\ucSubRows.resx">
-      <DependentUpon>ucSubRows.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="lib\userControls\ucExmample.resx">
       <DependentUpon>ucExmample.cs</DependentUpon>
     </EmbeddedResource>
@@ -216,6 +214,17 @@
     </None>
     <None Include="lib\gridControl\ds\dsInslagColli.xss">
       <DependentUpon>dsInslagColli.xsd</DependentUpon>
+    </None>
+    <None Include="lib\ds\dsCategory.xsc">
+      <DependentUpon>dsCategory.xsd</DependentUpon>
+    </None>
+    <None Include="lib\ds\dsCategory.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsCategory.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="lib\ds\dsCategory.xss">
+      <DependentUpon>dsCategory.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
